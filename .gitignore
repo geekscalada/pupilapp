@@ -1,0 +1,17 @@
+nightwatch_scrapMatchID/launchTestLog.log
+nightwatch_scrapMatchID/test_output/
+nightwatch_scrapMatchID/screenshots
+nightwatch_scrapMatchID/trash/
+nightwatch_scrapMatchID/dataJson/partidos.json
+nightwatch_scrapMatchID/secretSite.js
+pupila/program.log
+pupila/dataLog.log
+pupila/trashAndExamples/
+pupila/secretApi.js
+pupila/node_modules
+/pupila/pool.js
+docker/.env
+docker/secretMetabaseUser.sql
+toImprove.yaml
+
+

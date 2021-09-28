@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="nightwatchPupila"
+    errors="1" failures="0" hostname="" id="" package="nightwatchPupila" skipped="1"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+        Error: An error occurred while retrieving a new session: &#34;socket hang up&#34;
+       at endReadableNT (internal/streams/readable.js:1317:12)
+       at processTicksAndRejections (internal/process/task_queues.js:82:21)
+    </system-err>
+  
+
+    
+    <error message="An error occurred while retrieving a new session: &#34;socket hang up&#34;"><![CDATA[
+      Error: An error occurred while retrieving a new session: &#34;socket hang up&#34;
+    at WebdriverProtocol.handleSessionCreateError (/usr/lib/node_modules/nightwatch/lib/transport/transport.js:110:15)
+    at HttpRequest.&lt;anonymous&gt; (/usr/lib/node_modules/nightwatch/lib/transport/transport.js:166:32)
+    at HttpRequest.emit (events.js:400:28)
+    at ClientRequest.&lt;anonymous&gt; (/usr/lib/node_modules/nightwatch/lib/http/request.js:143:19)
+    at ClientRequest.emit (events.js:412:35)
+    at Socket.socketOnEnd (_http_client.js:499:9)
+    at Socket.emit (events.js:412:35)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="1xbet e2e test" classname="nightwatchPupila">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

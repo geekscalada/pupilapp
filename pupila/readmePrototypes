@@ -1,0 +1,2 @@
+Si los métodos son creados con this.algo en el constructor, 
+no podemos acceder mediante un object.prototype

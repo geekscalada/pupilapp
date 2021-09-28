@@ -1,0 +1,60 @@
+[
+    {
+        "value": {
+            "3": {
+                "Cleveland Indians": [
+                    "To3"
+                ],
+                "Houston Astros": [
+                    "To9"
+                ],
+                "Seattle Mariners": [
+                    "To1"
+                ]
+            },
+            "4": {},
+            "10": {
+                "Indy Fuel": [
+                    "1p"
+                ]
+            },
+            "13": {
+                "Barretos SP": [
+                    "1p"
+                ],
+                "Sampaio Correa MA": [
+                    "1m"
+                ],
+                "Sao Jose EC SP": [
+                    "1p"
+                ],
+                "Union La Calera": [
+                    "2m"
+                ],
+                "Ypiranga RS": [
+                    "1p"
+                ]
+            },
+            "26": {
+                "Aleksandr Petrov": [
+                    "4s"
+                ],
+                "Aleksandr Yurevich Fedosov": [
+                    "4s"
+                ],
+                "Igor Petryshyn": [
+                    "NI"
+                ],
+                "Illya Semeniuk": [
+                    "3s"
+                ],
+                "Oleksandr Yarovoi": [
+                    "3s"
+                ],
+                "Petro Tsolik": [
+                    "4s"
+                ] 
+            } 
+        }
+    }
+]

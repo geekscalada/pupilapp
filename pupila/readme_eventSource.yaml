@@ -1,0 +1,20 @@
+Eventsource has close() method.
+
+When you use close(), stream variable don´t will be cleared, but, you don´t receive any events asociated to this stream.
+
+Do you need close addEventListeners to make garbage collector to reach this event and clear it for us? IDK
+    - It seems the response is not. 
+    - program closes when all of the streams are closed. 
+
+
+
+
+Evensource has a value of state of the connection, where:
+
+  0 — connecting
+  1 — open
+  2 — closed
+
+
+
+

@@ -1,0 +1,6 @@
+If a stream is closed, don´t receive events and is cleared throught gargage collector
+
+If a stream is not closed, even if don´t receive events because don´t have events, is not cleared by GC.
+
+When a stream is closed is not necessary clear events
+

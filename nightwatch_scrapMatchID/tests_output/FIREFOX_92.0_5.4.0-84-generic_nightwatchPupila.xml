@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="0"
+            tests="1">
+
+  <testsuite name="nightwatchPupila"
+    errors="2" failures="0" hostname="" id="" package="nightwatchPupila" skipped="0"
+    tests="1" time="86.14" timestamp="">
+  
+    <testcase name="1xbet e2e test" classname="nightwatchPupila" time="86.14" assertions="0">
+    <error message="Error while running &#34;execute&#34; command: Cannot read property &#39;length&#39; of null" type="error"><![CDATA[
+    TypeError: Error while running &#34;execute&#34; command: Cannot read property &#39;length&#39; of null
+    at NightwatchAPI.&lt;anonymous&gt; (/volume/nightwatchPupila.js:50:85)
+    at Function.makePromise (/usr/lib/node_modules/nightwatch/lib/utils/index.js:137:28)
+    at /usr/lib/node_modules/nightwatch/lib/index.js:135:62
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        Error: Error while running .url(): Error ECONNRESET: socket hang up
+       at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  TypeError: Error while running &#34;execute&#34; command: Cannot read property &#39;length&#39; of null
+       at NightwatchAPI.&lt;anonymous&gt; (/volume/nightwatchPupila.js:50:85)
+       at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

@@ -1,0 +1,5 @@
+It seems:
+
+- Status-> active: 0 -> means this match is not receiving odds (because has finished, not starting?, or in a betstop)
+
+- Status -> active: 1  it means this mach is receiving data

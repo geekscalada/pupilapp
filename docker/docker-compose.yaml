@@ -1,0 +1,72 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /data/postgres
+    volumes:
+       - /postgresVolume:/data/postgres
+       - ./DDL_scripts.sql:/docker-entrypoint-initdb.d/DDL_scripts.sql
+       - ./secretMetabaseUser.sql:/docker-entrypoint-initdb.d/secretMetabaseUser.sql
+    ports:
+       - "5732:5432"
+    networks:
+      - postgres
+    restart: unless-stopped  
+ 
+  pupila:
+    container_name: pupila
+    image: pupila:0.1
+    environment:
+      - NODE_ENV=production
+    volumes: 
+     - ../pupila:/volume 
+    #command: sh -c "nodemon --watch /volume/pupila.js  --delay 3 /volume/pupila.js"  #dev environment
+    command: sh -c "node --max-old-space-size=7000 /volume/pupila.js"
+    networks:
+      - postgres
+    restart: unless-stopped
+    depends_on:
+      - "postgres"
+      - "nightwatch"
+  
+  nightwatch:
+    container_name: nightwatch
+    image: nightwatch:0.1
+    volumes: 
+     - ../nightwatch_scrapMatchID:/volume
+     - ../pupila/dataJson:/dataJson     
+    command: tail -f
+    depends_on:
+      - "postgres"
+
+  metabase:
+    container_name: metabase
+    image: metabase/metabase
+    environment:
+      MB_DB_FILE: /metabase-data
+    #   MB_DB_TYPE: postgres 
+    #   MB_DB_DBNAME: ${POSTGRES_DB}
+    #   MB_DB_PORT: 5432
+    #   MB_DB_USER: ${POSTGRES_USER}
+    #   MB_DB_PASS: ${POSTGRES_PASSWORD}
+    #   MB_DB_HOST: postgres
+    volumes:
+      - ../volumes/metabase:/metabase-data       
+    ports:
+       - "7003:3000"
+    networks:
+       - postgres
+    restart: unless-stopped
+    depends_on:
+      - "postgres"
+
+networks:
+  postgres:
+    driver: bridge
+

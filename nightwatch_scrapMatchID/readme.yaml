@@ -1,0 +1,21 @@
+#Contenedor para NW.
+
+En desarrollo ->
+	Usamos el volumen para realizar pruebas. 
+	Código en el repositorio de gitHub
+	Necesitamos copiar el binario del geckodriver para poder trabajar en el directorio container:/volumen
+
+
+En producción -> Sin volúmenes y el código dentro. 
+
+
+# Principios del build
+
+	- En esta configuración no necesitamos ni mitmproxy ni un certificado para firefox. 
+	- Necesitamos nightwatch y geckodriver
+	
+
+
+
+
+
